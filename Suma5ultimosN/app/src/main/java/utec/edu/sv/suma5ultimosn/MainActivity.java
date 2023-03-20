@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btcalcular, btlimpiar;
 
     int Cont=0, suma=0;
-    String data1="", data2="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         btcalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-               String dato;
                int num;
                double result;
 
