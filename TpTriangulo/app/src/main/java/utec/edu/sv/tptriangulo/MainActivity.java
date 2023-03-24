@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 if (L1 > 0 && L2 > 0 && L3 > 0) {
 
                     if ((L1 == L2) && (L1 == L3) && (L2 == L3)) {
-                        //mensaje = "Es triangulo equilatero";
-                        //tvResul.setText(mensaje);
+
                         Intent i =new Intent(getApplicationContext(), equilatero.class);
                         i.putExtra("Ls1",Lado1.getText().toString());
                         i.putExtra("Ls2",Lado2.getText().toString());
@@ -51,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         //"Es triangulo Equilatero"
                     } else {
                         if ((L1 == L2) && (L3!=L1) && (L3 != L2)){
-                            //mensaje = "Es triangulo isoseles";
-                            //tvResul.setText(mensaje);
+
                             Intent i =new Intent(getApplicationContext(),isosceles.class);
                             i.putExtra("Ls1",Lado1.getText().toString());
                             i.putExtra("Ls2",Lado2.getText().toString());
@@ -62,36 +60,33 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else{
                             if ((L1 == L3) && (L2!=L1) && (L2 != L3)){
-                                //mensaje = "Es triangulo isoseles";
+
                                 Intent i=new Intent(getApplicationContext(),isosceles.class);
                                 i.putExtra("Ls1",Lado1.getText().toString());
                                 i.putExtra("Ls2",Lado2.getText().toString());
                                 i.putExtra("Ls3",Lado3.getText().toString());
                                 startActivity(i);
-                                //tvResul.setText(mensaje);
-                                //"es trianguloisoseles "
+
                             }
                             else{
                                 if ((L2 == L3) && (L2!=L1) && (L1 != L3)){
-                                    //mensaje = "Es triangulo isoseles";
-                                    //tvResul.setText(mensaje);
+
                                     Intent i=new Intent(getApplicationContext(),isosceles.class);
                                     i.putExtra("Ls1",Lado1.getText().toString());
                                     i.putExtra("Ls2",Lado2.getText().toString());
                                     i.putExtra("Ls3",Lado3.getText().toString());
                                     startActivity(i);
-                                    //"es triangulo isoseles"
+
                                 }
                                 else{
                                     if ((L1 != L2) && (L2!=L3) && (L3 != L1)){
-                                        //mensaje = "Es triangulo escaleno";
-                                        //tvResul.setText(mensaje);
+
                                         Intent i =new Intent(getApplicationContext(),escaleno.class);
                                         i.putExtra("Ls1",Lado1.getText().toString());
                                         i.putExtra("Ls2",Lado2.getText().toString());
                                         i.putExtra("Ls3",Lado3.getText().toString());
                                         startActivity(i);
-                                        //"es triengulo escaleno"
+
                                     }
                                     else{
                                         mensaje = "Error";
